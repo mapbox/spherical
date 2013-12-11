@@ -1,0 +1,24 @@
+{
+  "name": "spherical",
+  "version": "0.0.0",
+  "description": "spherical operations on the globe",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/spherical.git"
+  },
+  "keywords": [
+    "spherical",
+    "geodesy",
+    "operations"
+  ],
+  "author": "Tom MacWright",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mapbox/spherical/issues"
+  },
+  "homepage": "https://github.com/mapbox/spherical"
+}
