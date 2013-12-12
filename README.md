@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mapbox/spherical.png)](https://travis-ci.org/mapbox/spherical)
+
 # spherical
 
 Spherical world utilities
