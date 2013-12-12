@@ -8,7 +8,7 @@ Spherical world utilities
 
 Heading expressed as degrees between locations expressed as `[lon, lat]`.
 
-`heading(from, to)`
+`distance(from, to)`
 
 Distance in meters between locations expressed as `[lon, lat]`.
 
