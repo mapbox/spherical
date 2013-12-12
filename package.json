@@ -4,7 +4,7 @@
   "description": "spherical operations on the globe",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "node test/spherical.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/mapbox/spherical/issues"
   },
-  "homepage": "https://github.com/mapbox/spherical"
+  "homepage": "https://github.com/mapbox/spherical",
+  "devDependencies": {
+    "tap": "~0.4.6"
+  },
+  "dependencies": {
+    "wgs84": "0.0.0"
+  }
 }
