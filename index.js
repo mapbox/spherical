@@ -7,17 +7,19 @@ module.exports.heading = function(from, to) {
     return 180 * Math.atan2(y, x) / Math.PI;
 };
 
-module.exports.distance = function(from, to) {
+module.exports.distance = function(from, to, radius) {
+    radius = radius || wgs84.RADIUS;
     var sinHalfDeltaLon = Math.sin(Math.PI * (to[0] - from[0]) / 360);
     var sinHalfDeltaLat = Math.sin(Math.PI * (to[1] - from[1]) / 360);
     var a = sinHalfDeltaLat * sinHalfDeltaLat +
         sinHalfDeltaLon * sinHalfDeltaLon * Math.cos(Math.PI * from[1] / 180) * Math.cos(Math.PI * to[1] / 180);
-    return 2 * wgs84.RADIUS * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return 2 * radius * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 };
 
-module.exports.radial = function(from, tc_deg, d_m, wrap) {
+module.exports.radial = function(from, tc_deg, d_m, wrap, radius) {
+    radius = radius || wgs84.RADIUS;
     var tc = rad(tc_deg);
-    var d = d_m / wgs84.RADIUS;
+    var d = d_m / radius;
 
     var lon1 = rad(from[0]),
         lat1 = rad(from[1]);
